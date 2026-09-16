@@ -1,0 +1,6 @@
+Taux de défaut : 13.8% (2000 clients, 500 en test)
+
+Régression logistique : précision 0.874 | AUC 0.776
+  matrice de confusion [[VN, FP], [FN, VP]] : [[424, 7], [56, 13]]
+Forêt aléatoire : précision 0.874 | AUC 0.769
+  matrice de confusion [[VN, FP], [FN, VP]] : [[426, 5], [58, 11]]

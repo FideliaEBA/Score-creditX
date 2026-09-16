@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Score de risque de crédit — Microfinance</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Score de risque de crédit</h1>
+    <p class="sub">Outil d’aide à la décision pour conseillers de microfinance — projet d’apprentissage, données simulées.</p>
+  </header>
+
+  <div class="layout">
+    <section class="card">
+      <h2>Demande de crédit</h2>
+      <div class="grid">
+        <label>Âge<input id="age" type="number" min="18" max="80" value="35"></label>
+        <label>Revenu mensuel (FCFA)<input id="revenu" type="number" min="10000" step="5000" value="120000"></label>
+        <label>Années d’activité<input id="anciennete" type="number" min="0" max="40" step="0.5" value="4"></label>
+        <label>Épargne (FCFA)<input id="epargne" type="number" min="0" step="5000" value="100000"></label>
+        <label>Montant demandé (FCFA)<input id="montant" type="number" min="20000" step="5000" value="300000"></label>
+        <label>Durée
+          <select id="duree"><option>6</option><option selected>12</option><option>18</option><option>24</option></select>
+        </label>
+        <label>Crédits précédents<input id="nbcredits" type="number" min="0" max="10" value="1"></label>
+        <label>Retards de paiement<input id="retards" type="number" min="0" max="10" value="0"></label>
+      </div>
+      <label class="check"><input id="garant" type="checkbox"> Présence d’un garant</label>
+      <div class="actions">
+        <button id="calc" class="primary">Calculer le score</button>
+        <button id="ex" type="button">Exemple à risque</button>
+      </div>
+    </section>
+
+    <section class="card" id="result" aria-live="polite">
+      <h2>Résultat</h2>
+      <p class="muted" id="placeholder">Remplis la demande puis clique sur « Calculer le score ».</p>
+      <div id="out" hidden>
+        <div class="score"><span id="scoreVal">0</span><small>/100</small></div>
+        <div class="gauge"><div id="gaugeBar"></div></div>
+        <p id="level" class="level"></p>
+        <p class="muted" id="prob"></p>
+        <h3>Facteurs qui augmentent le risque</h3><ul id="up"></ul>
+        <h3>Facteurs qui le diminuent</h3><ul id="down"></ul>
+        <h3>Recommandations</h3><ul id="reco"></ul>
+      </div>
+    </section>
+  </div>
+
+  <footer>Modèle : régression logistique entraînée en Python sur 2 000 profils simulés. Cet outil est éducatif : il ne remplace pas l’analyse d’un conseiller ni une décision réelle de crédit.</footer>
+</main>
+<script src="model.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
