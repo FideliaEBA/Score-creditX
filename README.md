@@ -22,12 +22,7 @@ Le modèle logistique est retenu pour l'interface, car ses coefficients sont **e
 
 ![Influence des variables](results/influence_variables.png)
 
-## Utilisation
 
-```
-pip install -r requirements.txt
-python generate_data.py     # crée data/clients_microfinance.csv
-python train_model.py       # entraîne, évalue et exporte model.js
 ```
 
 Ouvrir ensuite `index.html` dans un navigateur.
@@ -42,12 +37,7 @@ index.html, style.css, script.js   interface
 data/  results/
 ```
 
-## Pistes d'amélioration
 
-- Utiliser un vrai jeu de données de crédit (Kaggle) et comparer les résultats
-- Régler le seuil de décision pour mieux détecter les défauts (rappel)
-- Valider le modèle par validation croisée
-- Ajouter des explications individuelles avec SHAP
 
 ## Auteure
 
