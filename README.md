@@ -24,12 +24,6 @@ Le modèle logistique est retenu pour l'interface, car ses coefficients sont **e
 
 
 ```
-
-Ouvrir ensuite `index.html` dans un navigateur.
-
-## Structure
-
-```
 generate_data.py   données simulées
 train_model.py     entraînement, métriques, graphiques, export du modèle
 model.js           paramètres du modèle utilisés par la page
